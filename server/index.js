@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 
 app.use((req, res) => {
   res.writeHead(200);
-  res.end("hello world\n");
+  res.end("SSL/TLS server\n");
 });
 
 app.listen(8000);

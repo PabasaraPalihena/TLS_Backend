@@ -2,20 +2,21 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
+const map = new Map();
 const https = require("https"),
   fs = require("fs");
 
-const options = {
-  key: fs.readFileSync("server-key.pem"),
-  cert: fs.readFileSync("server-cert.pem"),
-};
+// const options = {
+//   key: fs.readFileSync("server-key.pem"),
+//   cert: fs.readFileSync("server-cert.pem"),
+// };
 
 //request allow any domain
 app.use(cors({ origin: "*" }));
 
 //Body parser
 app.use(express.json({ limit: "50mb" }));
-app.use(express.urlencoded({ limit: "50mb" }));
+app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 app.use(bodyParser.json());
 

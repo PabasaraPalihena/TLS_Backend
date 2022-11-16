@@ -1,7 +1,8 @@
 const crypto = require("crypto-js");
 
 var data = "This is the data that need to be encrypted";
-var key = "password@111";
+var key = "secret@111";
+
 // Encrypte the data
 var encrypted = crypto.AES.encrypt(data, key).toString();
 console.log("Encrypted data");

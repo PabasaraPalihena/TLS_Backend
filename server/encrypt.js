@@ -1,8 +1,8 @@
 const crypto = require("crypto-js");
-require("dotenv").config();
+// require("dotenv").config();
 var data = "This is the data that need to be encrypted";
-// const secretkey = "12345";
-const secretkey = process.env.KEY;
+const secretkey = "12345";
+// const secretkey = process.env.KEY;
 
 // Encrypte the data
 var encrypted = crypto.AES.encrypt(data, secretkey).toString();

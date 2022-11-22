@@ -6,10 +6,10 @@ const map = new Map();
 const https = require("https"),
   fs = require("fs");
 
-// const options = {
-//   key: fs.readFileSync("server-key.pem"),
-//   cert: fs.readFileSync("server-cert.pem"),
-// };
+const options = {
+  key: fs.readFileSync("server-key.pem"),
+  cert: fs.readFileSync("server-cert.pem"),
+};
 
 //request allow any domain
 app.use(cors({ origin: "*" }));
